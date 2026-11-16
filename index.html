@@ -1,11 +1,5 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>MAQUANTO?</title><meta name="description" content="Il prezzo netto di ogni cliente, in un secondo. Listini e condizioni dei tuoi fornitori: chiedi e MAQUANTO? risponde.">
-<meta name="robots" content="noindex"><link rel="icon" href="logo.svg">
-<meta property="og:title" content="MAQUANTO?"><meta property="og:description" content="Il prezzo netto di ogni cliente, in un secondo.">
-</head><body>
-
-<style>:root{color-scheme:dark}
-
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAQUANTO? · il prezzo netto di ogni cliente, in un secondo</title><meta name="description" content="Il prezzo netto di ogni cliente, in un secondo: listini e condizioni dei tuoi fornitori, chiedi e MAQUANTO? risponde."><link rel="icon" href="logo.svg"><style>
 :root{--bg:#0b0b0c;--su:#141416;--su2:#1c1c1f;--ink:#f5f5f3;--muted:#b9b9b4;--line:#34343a;--giallo:#ffd60a;--giallo2:#a88a00;
 --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;--mono:"SF Mono",ui-monospace,Menlo,"Courier New",monospace}
 *{box-sizing:border-box}html{color-scheme:dark;scroll-behavior:smooth}
@@ -42,7 +36,7 @@ input:hover,textarea:hover,select:hover,.campo:hover{border-color:#8d8d97;backgr
 input:focus,textarea:focus,select:focus,.campo:focus{outline:0;border-color:var(--giallo);background:#17171a;box-shadow:0 0 0 4px rgba(255,214,10,.22)}
 
 /* ---- testata: menu solido, sospeso, in leggero movimento ---- */
-header{position:sticky;top:calc(10px + env(safe-area-inset-top,0px));z-index:20;padding:0 14px}
+header{position:sticky;top:10px;z-index:20;padding:0 14px}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px 16px;border-radius:20px;
   background:linear-gradient(#232327,#18181b);border:1px solid #3a3a42;
   box-shadow:0 8px 0 #0a0a0b,0 9px 0 #3a3a42,0 26px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.1);animation:respiro 6s ease-in-out infinite}
@@ -116,7 +110,7 @@ nav a.lk:hover{transform:translateY(-2px);filter:brightness(1.18)}nav a.lk:activ
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14.5px}footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}footer a{margin-right:16px}
 
 /* comparsa dolce allo scorrere */
-
+.app{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.app.si{opacity:1;transform:none}
 @media (max-width:980px){.piani{grid-template-columns:repeat(2,1fr)}.eroe .wrap{grid-template-columns:1fr}.scena{height:440px;max-width:520px;margin:10px auto 0;width:100%}.eroe p{max-width:none}}
 @media (max-width:640px){body{font-size:18px}section{padding:60px 0}.passi,.piani,.punti,.altri{grid-template-columns:1fr}nav a.lk{display:none}.b3{width:100%}nav .b3{width:auto}
   .scena{height:400px;transform:scale(.82);transform-origin:top center;margin-bottom:-50px}.f1{left:-8px}.tel{right:-4px}.marca{font-size:17px;gap:8px}.marca svg{width:40px;height:40px}header{padding:0 8px}header .wrap{padding:10px 10px 14px;gap:8px}nav{gap:8px}nav .b3.piccolo{font-size:15px;padding:12px 11px}}
@@ -141,16 +135,15 @@ html{overflow-x:clip}main{overflow-x:clip}
 .legale{max-width:840px;margin:0 auto;padding:64px 20px 40px}.legale h1{font-size:clamp(30px,4vw,40px);margin-bottom:26px}.legale h3{font-size:22px;margin:36px 0 10px}
 .legale p{color:var(--muted);font-size:18px;margin:10px 0}.legale b{color:var(--ink)}.legale table{border-collapse:collapse;width:100%;margin:14px 0;font-size:16.5px}
 .legale td,.legale th{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}.legale th{background:var(--su2)}
-#presto{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:#ffd60a;color:#111;font:700 17px var(--sans);padding:14px 22px;border-radius:12px;box-shadow:0 6px 0 #a88a00,0 18px 30px rgba(0,0,0,.6)}</style>
-
+</style></head><body>
 <header><div class="wrap"><a class="marca" href="#su"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 32 L21 10 H58 V54 H21 Z" fill="none" stroke="currentColor" stroke-width="6"/><path d="M29 26c0-5 4-8 9-8s9 3 9 8c0 4-2 6-5 7-3 1-4 3-4 6v1" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="square"/><rect x="35" y="43" width="6" height="6" fill="currentColor"/></svg>MAQUANTO?</a>
-<nav><a class="lk" href="#come">Come funziona</a><a class="lk" href="#prezzi">Prezzi</a><a class="b3 piccolo" href="#" data-presto="1">Chiedi l’accesso</a></nav></div></header>
+<nav><a class="lk" href="#come">Come funziona</a><a class="lk" href="#prezzi">Prezzi</a><a class="b3 piccolo scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html">Accedi</a><a class="b3 piccolo" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></nav></div></header>
 <main id="su">
 <section class="eroe"><div class="wrap">
 <div><h1>Il prezzo netto<br>di ogni cliente.<br><em>In un secondo.</em></h1>
 <p>Carichi i listini e le condizioni dei tuoi fornitori. Poi chiedi, anche a voce dal telefono.</p>
-<div class="azioni"><a class="b3" href="#" data-presto="1">Chiedi l’accesso →</a><a class="b3 scuro" href="#prezzi">Guarda i prezzi</a></div>
-<div class="fid">Da 9 € al mese · disdici quando vuoi · fatturabile e deducibile<br>Per ora si entra su invito.</div></div>
+<div class="azioni"><a class="b3" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice →</a><a class="b3 scuro" href="#prezzi">Guarda i prezzi</a></div>
+<div class="fid">Da 9 € al mese · disdici quando vuoi · fatturabile e deducibile<br>Per ora si entra su invito. <a href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Hai un codice di invito?</a></div></div>
 <div class="scena" aria-hidden="true"><div class="palco" id="palco">
 <div class="foglio tab f1"><b>LISTINO.XLSX</b><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <div class="foglio f2"><b>CONDIZIONI.PDF</b><i></i><i class="c"></i><i></i><i class="g"></i><i></i><i class="c"></i><i></i></div>
@@ -190,7 +183,7 @@ html{overflow-x:clip}main{overflow-x:clip}
 </div></section>
 
 <section class="scuro-f" id="prezzi"><div class="wrap"><h2>Prezzi per agenti</h2><p class="sotto">Domande sui prezzi senza limiti in ogni piano.</p><p class="fatt-nota">🧾 Fattura elettronica per ogni pagamento: per chi ha partita IVA è un costo deducibile e l’IVA è detraibile.</p>
-<div class="piani"><div class="piano app"><h3>Consumo</h3><div class="prezzo">9 €<small>al mese fisso + IVA</small></div><p class="primo">Primo mese <b>19 €</b>: comprende il caricamento del tuo archivio, fino a 30 documenti</p><ul><li>1 utente</li><li>Fino a 5 fornitori</li><li>Domande sui prezzi senza limiti</li><li>100 domande all’Agente IA e 10 documenti al mese</li><li>Finite si blocca: ricarica 10 € o passi a Start</li></ul><div class="giu"><label class="opz"><input type="checkbox" class="flag-fatt" data-base="9" data-opz="4"><b>Aggiungi i Fatturati</b> +4 €/mese<span class="tot" hidden></span></label><a class="b3 piccolo largo scuro" href="#" data-presto="1">Chiedi l’accesso</a></div></div><div class="piano app"><h3>Start</h3><div class="prezzo">29 €<small>al mese + IVA</small></div><p class="primo">Primo mese <b>49 €</b>: comprende il caricamento del tuo archivio, fino a 60 documenti</p><ul><li>1 utente (ogni collaboratore costa come un altro Start)</li><li>Fino a 10 fornitori</li><li>300 domande all’Agente IA e 30 documenti al mese</li><li>Listini, anagrafiche e condizioni da Excel e PDF</li></ul><div class="giu"><label class="opz"><input type="checkbox" class="flag-fatt" data-base="29" data-opz="10"><b>Aggiungi i Fatturati</b> +10 €/mese<span class="tot" hidden></span></label><a class="b3 piccolo largo scuro" href="#" data-presto="1">Chiedi l’accesso</a></div></div><div class="piano app top"><h3>Pro</h3><div class="prezzo">79 €<small>al mese + IVA</small></div><p class="primo">Primo mese <b>109 €</b>: comprende il caricamento del tuo archivio, fino a 250 documenti</p><ul><li>3 utenti</li><li>Fino a 100 fornitori</li><li>800 domande all’Agente IA e 150 documenti al mese</li><li>Agenda e calcolatrice sconto e margine</li><li>Documenti in ogni formato letti dall’Agente IA</li><li>Versione mobile e domande a voce</li><li>Fatturati e statistiche compresi, senza costi in più</li></ul><div class="giu"><a class="b3 piccolo largo" href="#" data-presto="1">Chiedi l’accesso</a></div></div><div class="piano app"><h3>Business</h3><div class="prezzo">B2B<small>su misura, su preventivo</small></div><ul><li>10 utenti</li><li>Fornitori senza limiti</li><li>2.500 domande all’Agente IA e 500 documenti al mese</li><li>Tutto quello di Pro</li><li>Più caselle mail collegate</li></ul><div class="giu"><a class="b3 piccolo largo scuro" href="#" data-presto="1">Chiedi un preventivo</a></div></div></div>
+<div class="piani"><div class="piano app"><h3>Consumo</h3><div class="prezzo">9 €<small>al mese fisso + IVA</small></div><p class="primo">Primo mese <b>19 €</b>: comprende il caricamento del tuo archivio, fino a 30 documenti</p><ul><li>1 utente</li><li>Fino a 5 fornitori</li><li>Domande sui prezzi senza limiti</li><li>100 domande all’Agente IA e 10 documenti al mese</li><li>Finite si blocca: ricarica 10 € o passi a Start</li></ul><div class="giu"><label class="opz"><input type="checkbox" class="flag-fatt" data-base="9" data-opz="4"><b>Aggiungi i Fatturati</b> +4 €/mese<span class="tot" hidden></span></label><a class="b3 piccolo largo scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></div></div><div class="piano app"><h3>Start</h3><div class="prezzo">29 €<small>al mese + IVA</small></div><p class="primo">Primo mese <b>49 €</b>: comprende il caricamento del tuo archivio, fino a 60 documenti</p><ul><li>1 utente (ogni collaboratore costa come un altro Start)</li><li>Fino a 10 fornitori</li><li>300 domande all’Agente IA e 30 documenti al mese</li><li>Listini, anagrafiche e condizioni da Excel e PDF</li></ul><div class="giu"><label class="opz"><input type="checkbox" class="flag-fatt" data-base="29" data-opz="10"><b>Aggiungi i Fatturati</b> +10 €/mese<span class="tot" hidden></span></label><a class="b3 piccolo largo scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></div></div><div class="piano app top"><h3>Pro</h3><div class="prezzo">79 €<small>al mese + IVA</small></div><p class="primo">Primo mese <b>109 €</b>: comprende il caricamento del tuo archivio, fino a 250 documenti</p><ul><li>3 utenti</li><li>Fino a 100 fornitori</li><li>800 domande all’Agente IA e 150 documenti al mese</li><li>Agenda e calcolatrice sconto e margine</li><li>Documenti in ogni formato letti dall’Agente IA</li><li>Versione mobile e domande a voce</li><li>Fatturati e statistiche compresi, senza costi in più</li></ul><div class="giu"><a class="b3 piccolo largo" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></div></div><div class="piano app"><h3>Business</h3><div class="prezzo">B2B<small>su misura, su preventivo</small></div><ul><li>10 utenti</li><li>Fornitori senza limiti</li><li>2.500 domande all’Agente IA e 500 documenti al mese</li><li>Tutto quello di Pro</li><li>Più caselle mail collegate</li></ul><div class="giu"><a class="b3 piccolo largo scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></div></div></div>
 <div class="altri">
 <div class="riga presto app"><div><h3>Rivenditori e showroom</h3><p>Costo d’acquisto e margine su ogni risposta.</p></div><span class="tag">Coming soon</span></div>
 <div class="riga presto app"><div><h3>B2B · grossisti e catene</h3><p>Più sale mostra, soluzione su misura.</p></div><span class="tag">Coming soon</span></div>
@@ -206,48 +199,14 @@ html{overflow-x:clip}main{overflow-x:clip}
 <div class="carta"><div class="num">⇄</div><h3>Tutti allineati</h3><p>Ogni venditore dello showroom dà lo stesso prezzo, con le stesse condizioni.</p></div>
 <div class="carta"><div class="num">☰</div><h3>Più punti vendita</h3><p>Listini comuni a tutte le sale e clienti divisi per sala mostra.</p></div>
 </div>
-<div class="sr-piede"><a class="b3 scuro" href="#" data-presto="1">Avvisami quando è pronto</a></div>
+<div class="sr-piede"><a class="b3 scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Avvisami quando è pronto</a></div>
 </div></section>
 
-<section class="fine"><div class="wrap"><h2>Pronto in pochi minuti.</h2><a class="b3" href="#" data-presto="1">Chiedi l’accesso →</a>
+<section class="fine"><div class="wrap"><h2>Pronto in pochi minuti.</h2><a class="b3" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice →</a>
 </div></section>
 </main>
-<footer><div class="wrap"><div>© 2026 F&amp;F e co. · P.IVA 03063200368</div></div></footer>
-<script>/* Suono «click» a ogni clic su qualcosa di cliccabile (Fabrizio 16/11/2026).
-   Nessun file audio: il suono è generato dal browser. Per spegnerlo su un dispositivo: localStorage 'mq-suono' = '0'. */
-(function () {
-  var ctx = null;
-  var COSA = 'button,a[href],label,select,summary,[role=button],input[type=checkbox],input[type=radio],input[type=submit],.tendina-btn,.opz,[data-sez],[data-imp]';
-  function click() {
-    try { if (localStorage.getItem('mq-suono') === '0') return; } catch (e) {}
-    try {
-      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
-      if (ctx.state === 'suspended') ctx.resume();
-      var t = ctx.currentTime;
-      // colpo secco: un soffio brevissimo di rumore + una nota che cade
-      var n = ctx.createBufferSource(), buf = ctx.createBuffer(1, 600, ctx.sampleRate), d = buf.getChannelData(0);
-      for (var i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 3);
-      n.buffer = buf;
-      var f = ctx.createBiquadFilter(); f.type = 'highpass'; f.frequency.value = 1800;
-      var gn = ctx.createGain(); gn.gain.value = 0.22;
-      n.connect(f); f.connect(gn); gn.connect(ctx.destination); n.start(t);
-      var o = ctx.createOscillator(), g = ctx.createGain();
-      o.type = 'triangle'; o.frequency.setValueAtTime(1500, t); o.frequency.exponentialRampToValueAtTime(420, t + 0.045);
-      g.gain.setValueAtTime(0.16, t); g.gain.exponentialRampToValueAtTime(0.0008, t + 0.07);
-      o.connect(g); g.connect(ctx.destination); o.start(t); o.stop(t + 0.08);
-    } catch (e) {}
-  }
-  document.addEventListener('pointerdown', function (e) {
-    var el = e.target && e.target.closest ? e.target.closest(COSA) : null;
-    if (!el || el.disabled || el.getAttribute('aria-disabled') === 'true') return;
-    click();
-  }, true);
-  // Invio o Spazio su un bottone: stesso suono
-  document.addEventListener('keydown', function (e) {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target && e.target.matches && e.target.matches('button,a[href],[role=button]')) click();
-  }, true);
-})();
-</script>
+<footer><div class="wrap"><div>© 2026 F&amp;F e co. · P.IVA 03063200368</div><div><a href="condizioni.html">Condizioni d’uso</a><a href="privacy.html">Privacy</a><a href="trattamento-dati.html">Trattamento dati</a></div></div></footer>
+<script src="/grafica3d.js" defer></script>
 <script>
 // opzione Fatturati: mostra il totale
 document.querySelectorAll('.flag-fatt').forEach(c=>c.addEventListener('change',()=>{const t=c.parentNode.querySelector('.tot');t.hidden=!c.checked;t.textContent='Totale '+(+c.dataset.base + +c.dataset.opz)+' €/mese + IVA'}));
@@ -264,7 +223,4 @@ function mostra(e){document.getElementById('r-n').textContent=e[1];document.getE
 function scrivi(k,giro){const e=ES[k];let i=0;ris.classList.remove('si');dom.textContent='';
   const t=setInterval(()=>{dom.textContent=e[0].slice(0,++i);if(i>=e[0].length){clearInterval(t);setTimeout(()=>mostra(e),450);if(giro<2)setTimeout(()=>scrivi((k+1)%ES.length,giro+1),5200)}},70)}
 if(!dom){}else if(calmo){dom.textContent=ES[0][0];mostra(ES[0])}else setTimeout(()=>scrivi(0,0),700);
-</script><div id="presto" role="status" hidden>Disponibile a breve</div><script>
-document.addEventListener('click',function(e){var a=e.target.closest('[data-presto]');if(!a)return;e.preventDefault();var t=document.getElementById('presto');t.hidden=false;clearTimeout(t._t);t._t=setTimeout(function(){t.hidden=true},2200)});
-</script>
-</body></html>
+</script></body></html>

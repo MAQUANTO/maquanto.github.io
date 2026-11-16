@@ -1,0 +1,160 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy · MAQUANTO?</title><meta name="description" content="Il prezzo netto di ogni cliente, in un secondo: listini e condizioni dei tuoi fornitori, chiedi e MAQUANTO? risponde."><link rel="icon" href="logo.svg"><style>
+:root{--bg:#0b0b0c;--su:#141416;--su2:#1c1c1f;--ink:#f5f5f3;--muted:#b9b9b4;--line:#34343a;--giallo:#ffd60a;--giallo2:#a88a00;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;--mono:"SF Mono",ui-monospace,Menlo,"Courier New",monospace}
+*{box-sizing:border-box}html{color-scheme:dark;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;letter-spacing:-.02em;line-height:1.1}
+h2{font-size:clamp(30px,4.2vw,44px);text-align:center}
+.sotto{color:var(--muted);text-align:center;max-width:46ch;margin:14px auto 0;font-size:20px}
+section{padding:84px 0}
+
+/* ---- BOTTONI 3D: tutto ciò che si clicca ---- */
+.b3{display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;text-decoration:none;font:700 19px/1 var(--sans);
+  padding:19px 30px;border-radius:14px;border:0;color:#111;background:linear-gradient(#ffe24a,#ffd60a);
+  box-shadow:0 7px 0 var(--giallo2),0 16px 26px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.55);
+  transform:translateY(0);transition:transform .12s ease,box-shadow .12s ease,filter .12s ease;-webkit-tap-highlight-color:transparent;user-select:none}
+.b3:hover{transform:translateY(-2px);box-shadow:0 9px 0 var(--giallo2),0 22px 30px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.55);filter:brightness(1.05)}
+.b3:active{transform:translateY(5px);box-shadow:0 2px 0 var(--giallo2),0 6px 10px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.4)}
+.b3:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.b3.scuro{color:var(--ink);background:linear-gradient(#2c2c31,#222226);
+  box-shadow:0 7px 0 #050505,0 16px 26px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px #3d3d44}
+.b3.scuro:hover{box-shadow:0 9px 0 #050505,0 22px 30px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.2),inset 0 0 0 1px #5a5a63}
+.b3.scuro:active{box-shadow:0 2px 0 #050505,0 6px 10px rgba(0,0,0,.5),inset 0 0 0 1px #3d3d44}
+.b3.piccolo{font-size:17px;padding:13px 20px;border-radius:12px;box-shadow:0 5px 0 var(--giallo2),0 10px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.55)}
+.b3.piccolo.scuro{box-shadow:0 5px 0 #050505,0 10px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px #3d3d44}
+.b3.piccolo:active{transform:translateY(4px);box-shadow:0 1px 0 var(--giallo2),0 4px 8px rgba(0,0,0,.45)}
+.b3.piccolo.scuro:active{box-shadow:0 1px 0 #050505,0 4px 8px rgba(0,0,0,.45),inset 0 0 0 1px #3d3d44}
+.b3.largo{width:100%}
+
+/* ---- CAMPI MODIFICABILI: si illuminano leggermente al passaggio del cursore ---- */
+input[type=text],input[type=email],input[type=search],input[type=tel],input[type=password],input[type=number],textarea,select,.campo{
+  font:19px var(--sans);color:var(--ink);background:#101012;border:1.5px solid #46464e;border-radius:12px;padding:16px 18px;width:100%;
+  transition:border-color .15s,box-shadow .15s,background .15s}
+input:hover,textarea:hover,select:hover,.campo:hover{border-color:#8d8d97;background:#17171a;box-shadow:0 0 0 4px rgba(255,255,255,.07),0 0 22px rgba(255,214,10,.10)}
+input:focus,textarea:focus,select:focus,.campo:focus{outline:0;border-color:var(--giallo);background:#17171a;box-shadow:0 0 0 4px rgba(255,214,10,.22)}
+
+/* ---- testata: menu solido, sospeso, in leggero movimento ---- */
+header{position:sticky;top:10px;z-index:20;padding:0 14px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px 16px;border-radius:20px;
+  background:linear-gradient(#232327,#18181b);border:1px solid #3a3a42;
+  box-shadow:0 8px 0 #0a0a0b,0 9px 0 #3a3a42,0 26px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.1);animation:respiro 6s ease-in-out infinite}
+@keyframes respiro{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.marca{display:flex;align-items:center;gap:14px;text-decoration:none;font:700 24px var(--mono);letter-spacing:.03em}
+.marca svg{width:54px;height:54px;color:var(--giallo);animation:gira 9s linear infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.7))}
+@keyframes gira{from{transform:perspective(300px) rotateY(0)}to{transform:perspective(300px) rotateY(360deg)}}
+nav{display:flex;align-items:center;gap:14px}nav a.lk{text-decoration:none;color:var(--ink);font-weight:600;font-size:17px;padding:11px 16px;border-radius:11px;
+  background:linear-gradient(#34343a,#26262a);box-shadow:0 5px 0 #0c0c0d,0 6px 0 #40404a,inset 0 1px 0 rgba(255,255,255,.17);transition:transform .11s,box-shadow .11s,filter .11s}
+nav a.lk:hover{transform:translateY(-2px);filter:brightness(1.18)}nav a.lk:active{transform:translateY(4px);box-shadow:0 1px 0 #0c0c0d,0 2px 0 #40404a}
+
+/* ---- apertura con scena 3D ---- */
+.eroe{padding:64px 0 90px}.eroe .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.eroe h1{font-size:clamp(40px,5.6vw,68px);font-weight:800}
+.eroe h1 em{font-style:normal;color:var(--giallo)}
+.eroe p{color:var(--muted);font-size:22px;max-width:30ch;margin:22px 0 34px}
+.azioni{display:flex;gap:18px;flex-wrap:wrap}
+.fid{margin-top:26px;color:var(--muted);font-size:16px}
+.scena{perspective:1500px;height:480px;position:relative}
+.palco{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(9deg) rotateY(-19deg);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.foglio{position:absolute;width:230px;height:300px;border-radius:10px;background:linear-gradient(#fdfdfb,#e9e9e4);color:#1a1a1a;padding:16px;
+  box-shadow:0 30px 50px rgba(0,0,0,.6);font:600 13px var(--sans);animation:su 7s ease-in-out infinite}
+.foglio b{display:inline-block;font:700 11px var(--mono);letter-spacing:.06em;background:#111;color:#fff;border-radius:5px;padding:3px 7px;margin-bottom:8px}
+.foglio i{display:block;height:8px;border-radius:4px;background:#cfcfc8;margin:9px 0}.foglio i.c{width:62%}.foglio i.g{background:var(--giallo);width:44%}
+.foglio.tab i{height:15px;border-radius:2px;background:repeating-linear-gradient(90deg,#cfcfc8 0 30%,transparent 30% 34%,#dcdcd6 34% 64%,transparent 64% 68%,#cfcfc8 68% 100%)}
+.f1{left:0;top:86px;transform:translateZ(-170px) rotate(-7deg)}
+.f2{left:96px;top:34px;transform:translateZ(-90px) rotate(3deg);animation-delay:-2.3s}
+.f3{left:44px;top:170px;transform:translateZ(-20px) rotate(-2deg);animation-delay:-4.6s}
+.tel{position:absolute;right:6px;top:8px;width:268px;height:452px;border-radius:38px;background:#0c0c0d;border:2px solid #4a4a52;padding:16px 14px;
+  transform:translateZ(90px);box-shadow:0 44px 70px rgba(0,0,0,.75),18px 22px 0 -4px rgba(255,214,10,.16),inset 0 0 0 5px #000;animation:su 7s ease-in-out -1.2s infinite}
+.tel .tacca{width:84px;height:20px;background:#000;border-radius:12px;margin:0 auto 20px}
+.tel .et{font:700 12px var(--mono);letter-spacing:.14em;color:var(--muted);margin:0 6px 8px}
+.tel .dom{border:1.5px solid #5a5a63;border-radius:12px;padding:13px 12px;font:600 15px var(--sans);min-height:50px;background:#151517}
+.tel .dom::after{content:"";display:inline-block;width:2px;height:17px;background:var(--giallo);margin-left:2px;vertical-align:-3px;animation:batti 1s steps(1) infinite}
+.tel .ris{margin:16px 2px 0;opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s}.tel .ris.si{opacity:1;transform:none}
+.tel .ris .n{font:800 34px var(--sans);color:var(--giallo);letter-spacing:-.02em}.tel .ris .d{font-size:14.5px;color:var(--ink);margin-top:8px}
+.tel .ris .f{font-size:13px;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid #33333a}
+@keyframes su{0%,100%{margin-top:0}50%{margin-top:-10px}}@keyframes batti{50%{opacity:0}}
+
+/* ---- tre passi ---- */
+.passi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;perspective:1200px}
+.carta{background:linear-gradient(var(--su2),var(--su));border:1px solid var(--line);border-radius:18px;padding:28px 26px;box-shadow:0 18px 30px rgba(0,0,0,.4)}
+.carta .num{width:52px;height:52px;border-radius:14px;background:var(--giallo);color:#111;font:800 26px/52px var(--sans);text-align:center;box-shadow:0 5px 0 var(--giallo2);margin-bottom:22px}
+.carta h3{font-size:24px;margin-bottom:10px}.carta p{margin:0;color:var(--muted);font-size:18px}
+.scuro-f{background:#101012;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.punti{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px;max-width:900px;margin:44px auto 0;padding:0;list-style:none}
+.punti li{display:flex;gap:14px;font-size:19px;color:var(--muted)}.punti b{color:var(--ink);display:block;font-size:20px}
+.punti li::before{content:"✓";flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,214,10,.14);color:var(--giallo);font:800 17px/30px var(--sans);text-align:center;margin-top:2px}
+
+/* ---- prezzi ---- */
+.piani{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;align-items:stretch}
+.piano{background:linear-gradient(var(--su2),var(--su));border:1px solid var(--line);border-radius:18px;padding:26px 22px 24px;display:flex;flex-direction:column;gap:14px;position:relative}
+.piano.top{border:2px solid var(--giallo);box-shadow:0 24px 44px rgba(255,214,10,.10)}
+.piano.top::before{content:"Il più scelto";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--giallo);color:#111;font:700 13px var(--sans);padding:5px 14px;border-radius:20px;white-space:nowrap}
+.piano h3{font-size:22px}.prezzo{font:800 44px/1 var(--sans);letter-spacing:-.03em}.prezzo small{display:block;font:500 15px var(--sans);color:var(--muted);letter-spacing:0;margin-top:8px}
+.primo{margin:0;font-size:14.5px;color:var(--giallo)}
+.piano ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:16.5px;display:grid;gap:8px}.piano li{padding-left:22px;position:relative}.piano li::before{content:"✓";position:absolute;left:0;color:var(--giallo);font-weight:800}
+.piano .giu{margin-top:auto;display:grid;gap:18px;padding-top:8px}
+/* opzione Fatturati: riquadro cliccabile = bottone 3D che resta premuto */
+.opz{display:block;cursor:pointer;font-size:15px;color:var(--muted);border-radius:12px;padding:12px 14px;background:linear-gradient(#2c2c31,#222226);
+  box-shadow:0 5px 0 #050505,inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px #3d3d44;transition:transform .12s,box-shadow .12s}
+.opz:hover{transform:translateY(-1px);box-shadow:0 6px 0 #050505,inset 0 1px 0 rgba(255,255,255,.2),inset 0 0 0 1px #5a5a63}
+.opz:has(input:checked){transform:translateY(4px);box-shadow:0 1px 0 #050505,inset 0 0 0 2px var(--giallo);background:#1d1a05}
+.opz input{accent-color:#ffd60a;width:19px;height:19px;vertical-align:-4px;margin:0 8px 0 0}.opz b{color:var(--ink)}.opz .tot{display:block;margin-top:8px;color:var(--giallo);font-weight:700;font-size:16px}
+.altri{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.riga{border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.riga h3{font-size:20px}.riga p{margin:4px 0 0;color:var(--muted);font-size:16px}.riga.presto{opacity:.5}
+.tag{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid #77777f;color:#b9b9b4;border-radius:20px;padding:6px 12px;white-space:nowrap}
+.nota{color:var(--muted);font-size:15px;max-width:80ch;margin:30px auto 0;text-align:center}
+.fine{text-align:center}.fine h2{margin-bottom:30px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14.5px}footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}footer a{margin-right:16px}
+
+/* comparsa dolce allo scorrere */
+.app{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.app.si{opacity:1;transform:none}
+@media (max-width:980px){.piani{grid-template-columns:repeat(2,1fr)}.eroe .wrap{grid-template-columns:1fr}.scena{height:440px;max-width:520px;margin:10px auto 0;width:100%}.eroe p{max-width:none}}
+@media (max-width:640px){body{font-size:18px}section{padding:60px 0}.passi,.piani,.punti,.altri{grid-template-columns:1fr}nav a.lk{display:none}.b3{width:100%}nav .b3{width:auto}
+  .scena{height:400px;transform:scale(.82);transform-origin:top center;margin-bottom:-50px}.f1{left:-8px}.tel{right:-4px}.marca{font-size:17px;gap:8px}.marca svg{width:40px;height:40px}header{padding:0 8px}header .wrap{padding:10px 10px 14px;gap:8px}nav{gap:8px}nav .b3.piccolo{font-size:15px;padding:12px 11px}}
+@media (max-width:400px){.marca{font-size:0;gap:0}}
+html{overflow-x:clip}main{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.app{opacity:1;transform:none}}
+
+/* seconda parte: showroom, coming soon (Fabrizio 16/11/2026) */
+.showroom{background:repeating-linear-gradient(135deg,#0f0f11 0 22px,#121215 22px 44px);border-top:1px solid var(--line)}
+.sr-testa{text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}.sr-testa .sotto{margin-top:0}
+.passi.sr .carta{opacity:.62;filter:grayscale(1);border-style:dashed}.passi.sr .num{background:#3a3a40;color:var(--ink);box-shadow:0 5px 0 #1c1c1f;font-size:24px}
+.sr-piede{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:16px}
+.fatt-nota{text-align:center;margin:18px auto 0;max-width:60ch;font-size:17px;color:var(--ink);background:var(--su2);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+/* sezione Fatturati (16/11/2026) */
+.fatt-dentro{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:center;margin-top:44px}.passi.fatt{margin-top:0;grid-template-columns:1fr}
+.passi.fatt .carta{display:grid;grid-template-columns:52px 1fr;column-gap:18px;padding:22px}.passi.fatt .num{grid-row:span 2;margin:0}.passi.fatt h3{font-size:21px;margin:2px 0 6px}
+.demo-f{background:#0c0c0d;border:2px solid #4a4a52;border-radius:26px;padding:24px 20px;box-shadow:0 34px 60px rgba(0,0,0,.6),14px 18px 0 -4px rgba(255,214,10,.14);transform:perspective(900px) rotateY(-8deg) rotateX(3deg)}
+.demo-f .q{border:1.5px solid #5a5a63;border-radius:12px;padding:13px 12px;font-weight:600;font-size:16px;background:#151517}
+.demo-f .r{font:800 40px var(--sans);color:var(--giallo);margin-top:18px;letter-spacing:-.02em}.demo-f .d{font-size:16px;margin-top:6px}.demo-f .f{font-size:13.5px;color:var(--muted);margin-top:12px;padding-top:10px;border-top:1px solid #33333a}
+@media (max-width:860px){.fatt-dentro{grid-template-columns:1fr}.demo-f{transform:none}}
+/* pagine legali */
+.legale{max-width:840px;margin:0 auto;padding:64px 20px 40px}.legale h1{font-size:clamp(30px,4vw,40px);margin-bottom:26px}.legale h3{font-size:22px;margin:36px 0 10px}
+.legale p{color:var(--muted);font-size:18px;margin:10px 0}.legale b{color:var(--ink)}.legale table{border-collapse:collapse;width:100%;margin:14px 0;font-size:16.5px}
+.legale td,.legale th{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}.legale th{background:var(--su2)}
+</style></head><body>
+<header><div class="wrap"><a class="marca" href="index.html"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 32 L21 10 H58 V54 H21 Z" fill="none" stroke="currentColor" stroke-width="6"/><path d="M29 26c0-5 4-8 9-8s9 3 9 8c0 4-2 6-5 7-3 1-4 3-4 6v1" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="square"/><rect x="35" y="43" width="6" height="6" fill="currentColor"/></svg>MAQUANTO?</a>
+<nav><a class="lk" href="index.html#come">Come funziona</a><a class="lk" href="index.html#prezzi">Prezzi</a><a class="b3 piccolo scuro" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html">Accedi</a><a class="b3 piccolo" href="https://mac-mini--fabrizio.tail4cd1c8.ts.net:10000/accedi.html#invito">Entra con il codice</a></nav></div></header>
+<main class="legale"><h1>MAQUANTO — Informativa sul trattamento dei dati personali</h1><h3>1. Titolare del trattamento</h3><p>F&amp;F sas di Panini Fabrizio e C., con sede in via Romano 15/5, 41043 Formigine (MO), P.IVA 03063200368. Per ogni richiesta sulla privacy: supporto@maquanto.it.</p><h3>2. Quali dati trattiamo</h3><p>2.1. <b>Dati dell&#x27;account e di fatturazione:</b> nome e cognome, email, cellulare, ragione sociale, partita IVA, codice univoco o PEC, indirizzo.</p><p>2.2. <b>Dati di utilizzo:</b> accessi, consensi e firme (data, ora, testo accettato), registri tecnici necessari al funzionamento e alla sicurezza.</p><p>2.3. <b>Dati di pagamento:</b> gestiti direttamente da Stripe. Il Titolare non vede né conserva i dati completi della carta.</p><p>2.4. <b>Contenuti caricati dal Cliente:</b> listini, lettere di condizioni, anagrafiche dei clienti del Cliente, statistiche. Per i dati personali contenuti in questi documenti il Titolare agisce come <b>responsabile del trattamento</b> per conto del Cliente, secondo l&#x27;Accordo sul trattamento dei dati (art. 28 GDPR).</p><h3>3. Perché li trattiamo e su quale base</h3><table><tr><th>Finalità</th><th>Base giuridica</th></tr><tr><td>Creare l&#x27;account e fornire il servizio</td><td>Esecuzione del contratto (art. 6.1.b)</td></tr><tr><td>Fatturare e rispettare gli obblighi fiscali</td><td>Obbligo di legge (art. 6.1.c)</td></tr><tr><td>Sicurezza, prevenzione di abusi, prova dei consensi</td><td>Legittimo interesse (art. 6.1.f)</td></tr><tr><td>Rispondere alle richieste di supporto</td><td>Esecuzione del contratto (art. 6.1.b)</td></tr></table><p>Non usiamo i dati per pubblicità di terzi e non li vendiamo.</p><h3>4. Chi tratta i dati per nostro conto</h3><p>Fornitori tecnici nominati responsabili del trattamento: server dell&#x27;app e archivio dei dati (server del Fornitore in Italia, con copie di sicurezza), sito di presentazione (Vercel), pagamenti (Stripe), domini (Aruba), inoltro della posta (ImprovMX), Agente IA (Anthropic). Alcuni di loro possono trattare dati fuori dall&#x27;Unione europea: in quel caso il trasferimento avviene con le garanzie previste dal GDPR (decisione di adeguatezza o clausole contrattuali tipo).</p><h3>5. Per quanto tempo</h3><p>Per la durata dell&#x27;abbonamento. Dopo la chiusura dell&#x27;account i dati sono cancellati entro 30 giorni, dopo aver permesso l&#x27;esportazione con «Esporta vault». Restano solo i dati che la legge obbliga a conservare (documenti fiscali: 10 anni) e le prove dei consensi per il tempo necessario a difendere i diritti del Titolare.</p><h3>6. I tuoi diritti</h3><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità dei dati e opporti al trattamento basato sul legittimo interesse, scrivendo a supporto@maquanto.it. Hai anche il diritto di presentare reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it).</p><h3>7. Cookie</h3><p>Il sito usa solo cookie tecnici necessari al funzionamento. Non usiamo cookie di profilazione né di pubblicità.</p></main>
+<footer><div class="wrap"><div>© 2026 F&amp;F e co. · P.IVA 03063200368</div><div><a href="condizioni.html">Condizioni d’uso</a><a href="privacy.html">Privacy</a><a href="trattamento-dati.html">Trattamento dati</a></div></div></footer>
+<script src="/grafica3d.js" defer></script>
+<script>
+// opzione Fatturati: mostra il totale
+document.querySelectorAll('.flag-fatt').forEach(c=>c.addEventListener('change',()=>{const t=c.parentNode.querySelector('.tot');t.hidden=!c.checked;t.textContent='Totale '+(+c.dataset.base + +c.dataset.opz)+' €/mese + IVA'}));
+// comparsa dolce allo scorrere
+const oss=new IntersectionObserver(v=>v.forEach(e=>{if(e.isIntersecting){e.target.classList.add('si');oss.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.app').forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+'ms';oss.observe(e)});
+// scena 3D: segue appena il cursore (solo computer)
+const palco=document.getElementById('palco'),calmo=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(palco&&!calmo&&matchMedia('(hover:hover)').matches)addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;palco.style.transform='rotateX('+(9-y*7)+'deg) rotateY('+(-19+x*10)+'deg)'});
+// domanda scritta e risposta: due esempi, poi si ferma
+const ES=[['fresco 60x120 grigio rossi','39,70 €/mq','netto 39,00 € + surcharge 0,70 €','Fonte: lettera del 12/10 · netto a pallet'],['sconto bianchi su alfa','50 + 10','sconto del cliente sul listino in vigore','Fonte: lettera condizioni del 03/02']];
+const dom=document.getElementById('dom'),ris=document.getElementById('ris');
+function mostra(e){document.getElementById('r-n').textContent=e[1];document.getElementById('r-d').textContent=e[2];document.getElementById('r-f').textContent=e[3];ris.classList.add('si')}
+function scrivi(k,giro){const e=ES[k];let i=0;ris.classList.remove('si');dom.textContent='';
+  const t=setInterval(()=>{dom.textContent=e[0].slice(0,++i);if(i>=e[0].length){clearInterval(t);setTimeout(()=>mostra(e),450);if(giro<2)setTimeout(()=>scrivi((k+1)%ES.length,giro+1),5200)}},70)}
+if(!dom){}else if(calmo){dom.textContent=ES[0][0];mostra(ES[0])}else setTimeout(()=>scrivi(0,0),700);
+</script></body></html>
